@@ -1,0 +1,13 @@
+server:
+  servlet:
+    context-path: /v1 #TODO: doesn't work, check NettyWebServerFactoryPortCustomizer
+
+
+pokemon:
+  api:
+    url:
+      base-path: 'https://pokeapi.co/api/v2'
+      pokemon-path: '/pokemon?offset=%s&limit=%s'
+    offset: 0
+    limit: 99999
+    buffer-size: 16777216 #in bytes
