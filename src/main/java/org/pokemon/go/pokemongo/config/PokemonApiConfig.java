@@ -8,6 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class PokemonApiConfig {
 
     private int bufferSize;
+    private int cacheTtl;
     private int offset;
     private int limit;
 }

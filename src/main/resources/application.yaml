@@ -1,7 +1,6 @@
-server:
-  servlet:
-    context-path: /v1 #TODO: doesn't work, check NettyWebServerFactoryPortCustomizer
-
+spring:
+  webflux:
+    base-path: /v1
 
 pokemon:
   api:
@@ -11,3 +10,4 @@ pokemon:
     offset: 0
     limit: 99999
     buffer-size: 16777216 #in bytes
+    cache-ttl: 3600 #in seconds
