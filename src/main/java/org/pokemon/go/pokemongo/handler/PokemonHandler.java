@@ -27,7 +27,7 @@ public class PokemonHandler {
                     Integer.parseInt(request.queryParam(LIMIT_QUERY_PARAM).get()) : Integer.MAX_VALUE;
             return ServerResponse.ok()
                     .contentType(MediaType.APPLICATION_JSON)
-                    .body(pokemonClientV2.fetchAllPokemons(attribute, limit), PokemonDto.class);
+                    .body(pokemonClientV2.findPokemonsByAttributeAndLimit(attribute, limit), PokemonDto.class);
         } catch (IllegalArgumentException e) {
             return ServerResponse.badRequest().build();
         }

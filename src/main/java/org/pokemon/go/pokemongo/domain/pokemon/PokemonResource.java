@@ -1,15 +1,15 @@
 package org.pokemon.go.pokemongo.domain.pokemon;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import java.io.Serializable;
+
+@Data
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class PokemonResource {
+public class PokemonResource implements Serializable {
 
     private String name;
     private String url;
