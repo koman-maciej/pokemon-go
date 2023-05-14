@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class PokemonGoApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void contextLoadsTest() {
+		PokemonGoApplication.main(new String[] {});
 	}
-
 }
