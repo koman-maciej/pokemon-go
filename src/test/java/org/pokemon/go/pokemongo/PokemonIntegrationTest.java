@@ -31,7 +31,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
-public class PokemonIT {
+class PokemonIntegrationTest {
 
     public static final PokemonDefinitionResource BULBASAUR = PokemonDefinitionResource.builder()
             .id(1).name("bulbasaur").weight(69).height(7).baseExperience(64).build();
