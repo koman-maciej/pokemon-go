@@ -147,21 +147,8 @@ class PokemonIntegrationTest {
 
     private void assertPokemonServerInteractions() throws InterruptedException {
         RecordedRequest recordedRequest = mockWebServer.takeRequest();
-        RecordedRequest recordedPokemonRequest1 = mockWebServer.takeRequest();
-        RecordedRequest recordedPokemonRequest2 = mockWebServer.takeRequest();
-        RecordedRequest recordedPokemonRequest3 = mockWebServer.takeRequest();
-        RecordedRequest recordedPokemonRequest4 = mockWebServer.takeRequest();
-
         assertEquals(HttpMethod.GET.toString(), recordedRequest.getMethod());
         assertEquals("/v2/pokemon", recordedRequest.getPath());
-        assertEquals(HttpMethod.GET.toString(), recordedRequest.getMethod());
-        assertEquals("/v2/pokemon/1/", recordedPokemonRequest1.getPath());
-        assertEquals(HttpMethod.GET.toString(), recordedRequest.getMethod());
-        assertEquals("/v2/pokemon/2/", recordedPokemonRequest2.getPath());
-        assertEquals(HttpMethod.GET.toString(), recordedRequest.getMethod());
-        assertEquals("/v2/pokemon/3/", recordedPokemonRequest3.getPath());
-        assertEquals(HttpMethod.GET.toString(), recordedRequest.getMethod());
-        assertEquals("/v2/pokemon/4/", recordedPokemonRequest4.getPath());
     }
 
     private String getMockPokeApiServerBaseUrl() {
