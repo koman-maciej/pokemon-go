@@ -2,11 +2,9 @@ package org.pokemon.go.pokemongo.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 @Builder
 public class PokemonDto {
     private int id;

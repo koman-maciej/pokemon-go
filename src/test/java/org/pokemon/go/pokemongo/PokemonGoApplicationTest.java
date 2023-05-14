@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PokemonGoApplicationTests {
+class PokemonGoApplicationTest {
 
 	@Test
-	void contextLoads() {
+	void contextLoadsTest() {
+		PokemonGoApplication.main(new String[] {});
 	}
-
 }

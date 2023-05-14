@@ -17,7 +17,7 @@ public class PokemonHandler {
     private static final String ATTRIBUTE_QUERY_PARAM = "attribute";
     private static final String LIMIT_QUERY_PARAM = "limit";
 
-    private final PokemonClient pokemonClientV2;
+    private final PokemonClient pokemonClient;
 
     public Mono<ServerResponse> fetchPokemons(ServerRequest request) {
         try {
@@ -27,7 +27,7 @@ public class PokemonHandler {
                     Integer.parseInt(request.queryParam(LIMIT_QUERY_PARAM).get()) : Integer.MAX_VALUE;
             return ServerResponse.ok()
                     .contentType(MediaType.APPLICATION_JSON)
-                    .body(pokemonClientV2.findPokemonsByAttributeAndLimit(attribute, limit), PokemonDto.class);
+                    .body(pokemonClient.findPokemonsByAttributeAndLimit(attribute, limit), PokemonDto.class);
         } catch (IllegalArgumentException e) {
             return ServerResponse.badRequest().build();
         }

@@ -1,11 +1,11 @@
 package org.pokemon.go.pokemongo.domain.pokemon;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 
 import java.io.Serializable;
 
-@Data
+@Getter
 @AllArgsConstructor
 public class PageParameters implements Serializable {
     private final Integer offset;
